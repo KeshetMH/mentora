@@ -2,65 +2,48 @@ import React from "react";
 // We need to import the NavLink component from the router
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => <div style={styles.navStyles}>
+const Navbar = () => <div>
 {/* For every NavLink element we can specify the URL and the label */}
-      <NavLink style={({isActive}) => (isActive ? styles.active : styles.default)}
+      <NavLink 
 // This would be the URL
         to={"/"}>
 {/* This would be the label */}
-        Home
+        MENTORA {/* IMAGE */}
       </NavLink>
 
       <NavLink
-        style={({isActive}) => (isActive ? styles.active : styles.default)}
-        to={"/about"}>
+        to={"/About"}>
         About
       </NavLink>
 
       <NavLink
-        style={({isActive}) => (isActive ? styles.active : styles.default)}
-        to={"/exercises"}>
+        to={"/Exercises"}>
         Exercises
       </NavLink>
 
       <NavLink
-        style={({isActive}) => (isActive ? styles.active : styles.default)}
-        to={"/meals"}>
+        to={"/Meals"}>
         Meals
       </NavLink>
 
       <NavLink
-        style={({isActive}) => (isActive ? styles.active : styles.default)}
-        to={"/storysharing"}>
+        to={"/Wall_of_honor"}>
         Wall of honor
       </NavLink>
 
       <NavLink
-        style={({isActive}) => (isActive ? styles.active : styles.default)}
-        to={"/articles"}>
+        to={"/Articles"}>
         Articles
       </NavLink>
 
+      <div className="start_bottum">
+
       <NavLink
-        style={({isActive}) => (isActive ? styles.active : styles.default)}
-        to={"/fillform"}>
+        to={"/Start"}>
         Start
       </NavLink>
+
+      </div>
     </div>
 export default Navbar;
 
-const styles = {
-  navStyles: {
-    display: "flex",
-    height: 60,
-    alignItems: "center",
-    justifyContent: "space-around"
-  },
-  active: {
-    color: "red"
-  },
-  default: {
-    textDecoration: "none",
-    color: "black"
-  }
-};
