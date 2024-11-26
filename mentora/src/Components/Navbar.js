@@ -12,34 +12,29 @@ const Navbar = () => <div>
       </NavLink>
 
       <NavLink
-        to={"/About"}>
+        to={"/about"}>
         About
       </NavLink>
 
       <NavLink
-        to={"/Exercises"}>
+        to={"/exercises"}>
         Exercises
       </NavLink>
 
       <NavLink
-        to={"/Meals"}>
+        to={"/meals"}>
         Meals
       </NavLink>
 
       <NavLink
-        to={"/Wall_of_honor"}>
-        Wall of honor
-      </NavLink>
-
-      <NavLink
-        to={"/Articles"}>
+        to={"/articles"}>
         Articles
       </NavLink>
 
       <div className="start_bottum">
 
       <NavLink
-        to={"/Start"}>
+        to={"/form"}>
         Start
       </NavLink>
 
