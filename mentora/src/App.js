@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Exercises from "./Views/exercises.js";
-import Meals from "./Views/meals.js";
-import Articles from "./Views/articles.js";
-import Start from "./Views/personal plan/goal.js";
-import About from "./Views/about.js";
+import Exercises from "./Views/Exercises.js";
+import Meals from "./Views/Meals.js";
+import Articles from "./Views/Articles.js";
+import Goal from "./Views/personal_plan/goal.js";
+import About from "./Views/About.js";
 import Navbar from "./Components/Navbar.js";
 
 
@@ -19,16 +19,16 @@ function App() {
         <Routes>
 {/* For every URL we can render a separate component */}
           <Route path="/" element={<Home />} />
-          <Route path="/exercises" element={<Exercises />} />
-          <Route path="/meals" element={<Meals />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/form" element={<Form />} />
-          <Route path="/form/goal" element={<Goal />} />
-          <Route path="/form/profile" element={<Goal />} />
-          <Route path="/form/bf-current" element={<Goal />} />
-          <Route path="/form/bf-target" element={<Goal />} />
-          <Route path="/form/nutrition" element={<Goal />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/Exercises" element={<Exercises />} />
+          <Route path="/Meals" element={<Meals />} />
+          <Route path="/Articles" element={<Articles />} />
+          <Route path="/Form" element={<Form />} />
+          <Route path="/Form/goal" element={<Goal />} />
+          <Route path="/Form/profile" element={<Goal />} />
+          <Route path="/Form/bf-current" element={<Goal />} />
+          <Route path="/Form/bf-target" element={<Goal />} />
+          <Route path="/Form/nutrition" element={<Goal />} />
+          <Route path="/About" element={<About />} />
         </Routes>
       </Router>
     </div>
