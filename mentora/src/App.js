@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Exercises from "./Views/exercises.js";
 import Meals from "./Views/meals.js";
 import Articles from "./Views/articles.js";
-import Start from "./Views/start.js";
+import Start from "./Views/personal plan/goal.js";
 import About from "./Views/about.js";
 import Navbar from "./Components/Navbar.js";
 

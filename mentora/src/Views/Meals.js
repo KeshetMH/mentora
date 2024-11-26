@@ -13,8 +13,8 @@ const Meals = () => {
                 <div>
                     <img>image of recipe</img>
                         <div>
-                            <span>time preparation</span>
-                            <span>calories</span>
+                            <p>time preparation</p>
+                            <p>calories</p>
                             <h2>name of recipe</h2>
                             <p>description(low-card,low-calories,high protein, etc)</p>
                         </div>
