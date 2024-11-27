@@ -4,9 +4,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Exercises from "./Views/Exercises.js";
 import Meals from "./Views/Meals.js";
 import Articles from "./Views/Articles.js";
-import Goal from "./Views/personal_plan/goal.js";
+import Goal from "./Views/Form/goal.js";
 import About from "./Views/About.js";
 import Navbar from "./Components/Navbar.js";
+import Home from "./Views/Home.js";
+
+
 
 
 function App() {
@@ -22,7 +25,6 @@ function App() {
           <Route path="/Exercises" element={<Exercises />} />
           <Route path="/Meals" element={<Meals />} />
           <Route path="/Articles" element={<Articles />} />
-          <Route path="/Form" element={<Form />} />
           <Route path="/Form/goal" element={<Goal />} />
           <Route path="/Form/profile" element={<Goal />} />
           <Route path="/Form/bf-current" element={<Goal />} />

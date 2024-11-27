@@ -10,14 +10,14 @@ const Exercises = () => {
                 </p>
 
                 <div>
-                    <input>here the user search fo the exercise</input>
+                    <input placeholder="here the user search fo the exercise"/>
                 </div>
 
                 <div>
                     <h2>name of exercise</h2>
-                    <image>image of exercise</image>
+                    <image sec="image of exercise"/>
                     <p>description how to do the exercise</p>
-                    <link>link to video of exercise</link>
+                    <link src="link to video of exercise"/>
                     <span>which muscle is working</span>
                 </div>
 

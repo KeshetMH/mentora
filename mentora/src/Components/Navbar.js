@@ -33,10 +33,7 @@ const Navbar = () => <div>
 
       <div className="start_bottum">
 
-      <NavLink
-        to={"/form"}>
-        <botton>Start</botton>
-      </NavLink>
+    
 
       </div>
     </div>

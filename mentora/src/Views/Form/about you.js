@@ -1,46 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 const Start = () => {
 
     return <div>
 
-                <div>
-                    <p>This 5 steps form collects key information to create a personalized workout plan</p>
-                    <div>
-                        <div>
-                            <img>icon of number</img>
-                            <p>Goal</p>
-                        </div>
-
-                        <div>
-                            <img>icon of number</img>
-                            <p>About you</p>
-                        </div>
-
-                        <div>
-                            <img>icon of number</img>
-                            <p>Current state</p>
-                        </div>
-
-                        <div>
-                            <img>icon of number</img>
-                            <p>Trget</p>
-                        </div>
-
-                        <div>
-                            <img>icon of number</img>
-                            <p>nutrition</p>
-                        </div>
-                    </div>
-                </div>
+           
 
                 <div>
                     <p>About you</p>
 
                     <div>
                         <div>
-                            <img></img>
+                            <symbol></symbol>
                             <p>Male</p>
                         </div>
 

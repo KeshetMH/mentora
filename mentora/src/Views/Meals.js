@@ -11,7 +11,7 @@ const Meals = () => {
                 balanced diet.</p>
 
                 <div>
-                    <img>image of recipe</img>
+                    <img src="image of recipe"/>
                         <div>
                             <p>time preparation</p>
                             <p>calories</p>

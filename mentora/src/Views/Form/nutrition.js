@@ -1,7 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
-const Start = () => {
+const Nutrition = () => {
 
     return <div>
 
@@ -9,27 +8,27 @@ const Start = () => {
                     <p>This 5 steps form collects key information to create a personalized workout plan</p>
                     <div>
                         <div>
-                            <img>icon of number</img>
+                            <img src="icon of number"/>
                             <p>Goal</p>
                         </div>
 
                         <div>
-                            <img>icon of number</img>
+                            <img src="icon of number"/> 
                             <p>About you</p>
                         </div>
 
                         <div>
-                            <img>icon of number</img>
+                            <img src="icon of number"/>
                             <p>Current state</p>
                         </div>
 
                         <div>
-                            <img>icon of number</img>
+                            <img src="icon of number"/>
                             <p>Trget</p>
                         </div>
 
                         <div>
-                            <img>icon of number</img>
+                            <img src="icon of number"/>
                             <p>nutrition</p>
                         </div>
                     </div>
@@ -39,19 +38,19 @@ const Start = () => {
                     <p>what's you main goals?</p>
 
                     <div>
-                        <img></img>
+                        <img src="symbol"/>
                         <p>Lose weight</p>
                         <p>burning fat and getting tinner</p>
                     </div>
 
                     <div>
-                        <img></img>
+                        <img src="symbol"/>
                         <p>Get fitter</p>
                         <p>bulding clean budy mass</p>
                     </div>
 
                     <div>
-                        <img></img>
+                        <img src="symbol"/>
                         <p>Build mucle</p>
                         <p>building body mass and strength</p>
                     </div>
@@ -62,4 +61,4 @@ const Start = () => {
 
 }
 
-export default Start;
+export default Nutrition;
