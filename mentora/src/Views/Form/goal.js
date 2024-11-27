@@ -2,11 +2,11 @@ import React from "react";
 
 const Start = () => {
 
-    return <div>
+    return <div className="section">
 
                 <div>
                     <p>This 5 steps form collects key information to create a personalized workout plan</p>
-                    <div>
+                    <div className="userInputProgress">
                         <div>
                             <img src="icon of number"/>
                             <p>Goal</p>
@@ -37,6 +37,8 @@ const Start = () => {
                 <div>
                     <p>what's you main goals?</p>
 
+                    <div className="question_one">
+
                     <div>
                         <img src="symbol"/>
                         <p>Lose weight</p>
@@ -53,6 +55,7 @@ const Start = () => {
                         <img src="symbol"/>
                         <p>Build mucle</p>
                         <p>building body mass and strength</p>
+                    </div>
                     </div>
 
                 </div>

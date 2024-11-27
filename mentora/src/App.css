@@ -52,7 +52,9 @@ a{
 .section{
   padding-top: 20px;
   min-height: 80vh;
-  max-width: 1200px;
+  max-width: 80vw;
+  text-align: center;
+ margin: auto;
 }
 
 .footer_Link{
@@ -60,7 +62,7 @@ display: flex;
 justify-content: space-between;
 margin-right:1rem ;
 background-color: rgba(255, 255, 255, 0.099);
-
+align-items: center;
 }
 
 .fotter_notes{
@@ -92,9 +94,23 @@ background-color: rgba(255, 255, 255, 0.099);
   font-size: 18px;
 }
 
+#logo_footer{
+  max-width: 4.5vh;
+}
+
 .footer_contact{
  /* width: 30vh;
  height: 30vh; */
 
+}
+
+.userInputProgress{
+  display: flex;
+  justify-content: space-between;
+}
+
+.question_one{
+  display: flex;
+  justify-content: space-between;
 }
 

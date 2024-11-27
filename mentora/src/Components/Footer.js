@@ -39,8 +39,8 @@ const Footer = () => {
         </div>
 
         <div className="footer_contact">
-        <a href="page.html"><img src={linkedin_logo}/></a>
-        <a href="page.html"><img src={email_logo}/></a>
+        <a  href="page.html"><img id="logo_footer" src={linkedin_logo}/></a>
+        <a href="page.html"><img id="logo_footer" src={email_logo}/></a>
         </div>
     </div>
 
