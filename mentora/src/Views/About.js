@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const About = () => {
 
-    return <div>
+    return <div className="About section">
             <h1>HOW IT WORKS</h1>
             <p> MENTORA was createed with the goal of make it easy for people to
                 achive their health goals with easy and straight forward interface. 

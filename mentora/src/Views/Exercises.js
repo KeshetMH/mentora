@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Exercises = () => {
 
-    return <div>
+    return <div className="Exercises section">
             <h1>EXERCISES</h1>
                 <p>We provides users with a comprehensive collection of workout movements. 
                 It teaches users the correct form for each exercise, ensuring they perform movements safely and effectively.

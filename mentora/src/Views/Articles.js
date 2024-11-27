@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Articles = () => {
 
-    return <div>
+    return <div className="Aeticle section">
             <h1>HEALTH AND FITNESS ARTICLES</h1>
                 <p>Our catalog covering all aspects of health, fitness, and healthy eating. 
                     It offers practical information for everyone, whether you're starting your 

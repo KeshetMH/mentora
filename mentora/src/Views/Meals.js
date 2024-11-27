@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Meals = () => {
 
-    return <div>
+    return <div className="Meals section">
             <h1></h1>
             <p>This library features recipes for healthy, quick-to-make, and nutritious 
                 meals that are both delicious and satisfying. Each recipe is designed to be 
