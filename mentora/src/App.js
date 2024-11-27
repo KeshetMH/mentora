@@ -8,8 +8,7 @@ import Goal from "./Views/Form/goal.js";
 import About from "./Views/About.js";
 import Navbar from "./Components/Navbar.js";
 import Home from "./Views/Home.js";
-
-
+import Footer from './Components/Footer.js';
 
 
 function App() {
@@ -32,6 +31,7 @@ function App() {
           <Route path="/Form/nutrition" element={<Goal />} />
           <Route path="/About" element={<About />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

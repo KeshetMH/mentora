@@ -1,16 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import splashImage from "../images/main2.jpeg";
 
 const Home = () => {
 
     return <div>
-            <section class="background">
+           <img className="splashImage" src={splashImage}/>
 
-            </section>
-
-            <buttom>start your workout plans</buttom>
-
-            <Footer></Footer>
+            <button>start your workout plans</button>
 
            </div>
 
