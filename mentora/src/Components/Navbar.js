@@ -36,6 +36,8 @@ const Navbar = () => <div className="navbar">
         About
       </NavLink>
 
+      <button>start</button>
+
       </div>
 
       

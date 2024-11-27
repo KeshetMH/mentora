@@ -1,6 +1,20 @@
-.start_bottum {
-  text-decoration: none;
+
+button {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.521);;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+  font-size:1rem;
+  justify-content: center;
+  padding: 10px;
 }
+
+button:hover {
+  background: #f8f8ff;
+  box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
+}
+
 
 .splashImage{
   width: 100%;
@@ -37,6 +51,8 @@ a{
 
 .section{
   padding-top: 20px;
+  min-height: 80vh;
+  max-width: 1200px;
 }
 
 .footer_Link{
@@ -58,5 +74,27 @@ background-color: rgba(255, 255, 255, 0.099);
 }
 
 .footer_line{
-  color: rgba(193, 8, 8, 0.564);
+  background-color: rgb(243, 237, 237);
+  height:0.5px
 }
+
+.footer{
+  background-color: rgba(234, 228, 228, 0.521);
+  padding: 5px;
+}
+
+.Home{
+  min-height: 83vh;
+}
+
+.App{
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.footer_contact{
+ /* width: 30vh;
+ height: 30vh; */
+
+}
+

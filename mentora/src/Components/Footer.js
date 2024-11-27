@@ -5,10 +5,12 @@ import Exercises from "../Views/Exercises";
 import Articles from "../Views/Articles";
 import About from "../Views/About";
 import Meals from "../Views/Meals";
+import email_logo from "../images/email_logo.png"
+import linkedin_logo from "../images/linkedin_logo.png"
 
 const Footer = () => {
     return(
-    <div>
+    <div className="footer">
 
     <div className="footer_Link">
         <img className="logo" src={logoImage}/>
@@ -36,9 +38,9 @@ const Footer = () => {
       </NavLink>
         </div>
 
-        <div>
-        <a href="page.html"><img src="linkedin.webp"/></a>
-        <a href="page.html"><img src="gmail.png"/></a>
+        <div className="footer_contact">
+        <a href="page.html"><img src={linkedin_logo}/></a>
+        <a href="page.html"><img src={email_logo}/></a>
         </div>
     </div>
 

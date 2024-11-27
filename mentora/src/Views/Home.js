@@ -6,9 +6,6 @@ const Home = () => {
 
     return <div className="Home">
            <img className="splashImage" src={splashImage}/>
-
-            <button>start your workout plans</button>
-
            </div>
 
     
