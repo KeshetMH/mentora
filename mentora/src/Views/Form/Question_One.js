@@ -1,14 +1,11 @@
-import React from "react";
+import React from 'react'
 
-const Start = () => {
+
+const Question_One = (props) =>  {
 
     return <div>
-
-           
-
                 <div>
-                    <p>About you</p>
-
+                    <p>Some questions about you...</p>
                     <div>
                         <div>
                             <symbol></symbol>
@@ -50,4 +47,4 @@ const Start = () => {
 
 }
 
-export default Start;
+export default Question_One;

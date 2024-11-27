@@ -37,7 +37,7 @@ const Navbar = () => <div className="navbar">
       </NavLink>
 
       <NavLink
-        to={"/form/goal"}>
+        to={"/form"}>
         <button>start</button>
       </NavLink>
 

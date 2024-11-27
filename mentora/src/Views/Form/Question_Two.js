@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 
-const Home = () => {
+const Question_Two = (props) =>  {
 
     return <div>
             
@@ -59,4 +59,4 @@ const Home = () => {
 
 }
 
-export default Home;
+export default Question_Two;

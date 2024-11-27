@@ -1,6 +1,14 @@
 import React from "react";
+import Question_Zero from "./Question_Zero";
+import Question_One from "./Question_One";
+import Question_Two from "./Question_Two";
+import Question_Three from "./Question_Three";
+import Question_Four from "./Question_Four";
+import { useState } from "react";
 
-const Start = () => {
+const Start = ({userInput, setUserInput}) => {
+
+    const [progrees,setProgress]=useState[0]
 
     return <div className="section">
 
@@ -34,31 +42,11 @@ const Start = () => {
                     </div>
                 </div>
 
-                <div>
-                    <p>what's you main goals?</p>
-
-                    <div className="question_one">
-
-                    <div>
-                        <img src="symbol"/>
-                        <p>Lose weight</p>
-                        <p>burning fat and getting tinner</p>
-                    </div>
-
-                    <div>
-                        <img src="symbol"/>
-                        <p>Get fitter</p>
-                        <p>bulding clean budy mass</p>
-                    </div>
-
-                    <div>
-                        <img src="symbol"/>
-                        <p>Build mucle</p>
-                        <p>building body mass and strength</p>
-                    </div>
-                    </div>
-
-                </div>
+            <Question_Zero />
+            <Question_One />
+            <Question_Two />
+            <Question_Three />
+            <Question_Four />
 
            </div>
 

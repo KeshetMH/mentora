@@ -9,10 +9,14 @@ import About from "./Views/About.js";
 import Navbar from "./Components/Navbar.js";
 import Home from "./Views/Home.js";
 import Footer from './Components/Footer.js';
+import { useState } from 'react';
 
 
 
 function App() {
+
+const [userInput,setUserInput]=useState({})
+
   return (
     <div className="App">
       {/* Declaring the router which will hold al the routes/URLs*/}
@@ -25,11 +29,7 @@ function App() {
           <Route path="/Exercises" element={<Exercises />} />
           <Route path="/Meals" element={<Meals />} />
           <Route path="/Articles" element={<Articles />} />
-          <Route path="/Form/goal" element={<Goal />} />
-          <Route path="/Form/profile" element={<Goal />} />
-          <Route path="/Form/bf-current" element={<Goal />} />
-          <Route path="/Form/bf-target" element={<Goal />} />
-          <Route path="/Form/nutrition" element={<Goal />} />
+          <Route path="/Form" element={<Goal userInput={userInput} setUserInput={setUserInput}/>} />
           <Route path="/About" element={<About />} />
         </Routes>
         <Footer />
