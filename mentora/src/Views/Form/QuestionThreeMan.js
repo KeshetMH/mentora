@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const QuestionTwo = (props) =>  {
+const QuestionThreeMan = (props) =>  {
 
     return <div>
             
@@ -10,53 +10,61 @@ const QuestionTwo = (props) =>  {
             <div>
                 <img src="image of body"/>
                 <p>Body fat</p>
-                <p>7-12%</p>
+                <p>4-9%</p>
+            </div>
+
+            <div>
+                <img src="image of body"/>
+                <p>Body fat</p>
+                <p>9-14%</p>
             </div>
 
             <div>
                 <img src="image of body"/>  
                 <p>Body fat</p>
-                <p>12-17%</p>
+                <p>14-19%</p>
             </div>
 
             <div>
                 <img src="image of body"/>
                 <p>Body fat</p>
-                <p>17-22%</p>
+                <p>19-24%</p>
             </div>
 
             <div>
                 <img src="image of body"/>  
                 <p>Body fat</p>
-                <p>22-27%</p>
+                <p>24-29%</p>
             </div>
 
             <div>
                 <img src="image of body"/>
                 <p>Body fat</p>
-                <p>27-32%</p>
+                <p>29-34%</p>
             </div>
 
             <div>
                 <img src="image of body"/>
                 <p>Body fat</p>
-                <p>32-42%</p>
+                <p>34-39%</p>
             </div>
 
             <div>
                 <img src="image of body"/>
                 <p>Body fat</p>
-                <p>42-47%</p>
+                <p>39-44%</p>
             </div>
 
             <div>
                 <img src="image of body"/>
                 <p>Body fat</p>
-                <p>47-52%</p>
+                <p>44-54%</p>
             </div>
+
+            <button>NEXT</button>
 
            </div>
 
 }
 
-export default QuestionTwo;
+export default QuestionThreeMan;

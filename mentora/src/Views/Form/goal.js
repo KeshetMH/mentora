@@ -1,10 +1,12 @@
 import React from "react";
 import QuestionZero from "./QuestionZero";
 import QuestionOne from "./QuestionOne";
-import QuestionTwo from "./QuestionTwo";
-import QuestionThree from "./QuestionThree ";
+import QuestionTwoWomen from "./QuestionTwoWomen";
+import QuestionThreeWomen from "./QuestionThreeWomen ";
 import QuestionFour from "./QuestionFour";
 import { useState } from "react";
+import QuestionTwoMan from "./QuestionTwoMan";
+import QuestionThreeMan from "./QuestionThreeMan";
 
 const Start = ({userInput, setUserInput}) => {
 
@@ -44,8 +46,10 @@ const Start = ({userInput, setUserInput}) => {
 
             <QuestionZero />
             <QuestionOne />
-            <QuestionTwo />
-            <QuestionThree />
+            <QuestionTwoWomen />
+            <QuestionTwoMan />
+            <QuestionThreeWomen />
+            <QuestionThreeMan />
             <QuestionFour />
 
            </div>

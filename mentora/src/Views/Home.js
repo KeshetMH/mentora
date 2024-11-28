@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import splashImage from "../images/main3.jpg";
+import splashImage from "../images/main.jpg";
 
 const Home = () => {
 

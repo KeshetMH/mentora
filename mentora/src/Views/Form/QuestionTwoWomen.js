@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-const QuestionThree = (props) =>  {
+const QuestionTwoWomen = (props) =>  {
 
     return <div>
             
-            <p>What image represents your target figure?</p>
+            <p>What image represents your current figure?</p>
 
             <div>
                 <img src="image of body"/>
@@ -55,8 +55,10 @@ const QuestionThree = (props) =>  {
                 <p>47-52%</p>
             </div>
 
+            <button>NEXT</button>
+
            </div>
 
 }
 
-export default QuestionThree;
+export default QuestionTwoWomen;

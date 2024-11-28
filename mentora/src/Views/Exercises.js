@@ -18,7 +18,7 @@ const Exercises = () => {
                     <image sec="image of exercise"/>
                     <p>description how to do the exercise</p>
                     <link src="link to video of exercise"/>
-                    <span>which muscle is working</span>
+                    <p>which muscle is working</p>
                 </div>
 
            </div>
