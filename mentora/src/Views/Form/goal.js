@@ -1,14 +1,14 @@
 import React from "react";
-import Question_Zero from "./Question_Zero";
-import Question_One from "./Question_One";
-import Question_Two from "./Question_Two";
-import Question_Three from "./Question_Three";
-import Question_Four from "./Question_Four";
+import QuestionZero from "./QuestionZero";
+import QuestionOne from "./QuestionOne";
+import QuestionTwo from "./QuestionTwo";
+import QuestionThree from "./QuestionThree ";
+import QuestionFour from "./QuestionFour";
 import { useState } from "react";
 
 const Start = ({userInput, setUserInput}) => {
 
-    const [progrees,setProgress]=useState[0]
+    const [progress,setProgress]=useState[0]
 
     return <div className="section">
 
@@ -42,11 +42,11 @@ const Start = ({userInput, setUserInput}) => {
                     </div>
                 </div>
 
-            <Question_Zero />
-            <Question_One />
-            <Question_Two />
-            <Question_Three />
-            <Question_Four />
+            <QuestionZero />
+            <QuestionOne />
+            <QuestionTwo />
+            <QuestionThree />
+            <QuestionFour />
 
            </div>
 

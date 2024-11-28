@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Question_One = (props) =>  {
+const QuestionOne = (props) =>  {
 
     return <div>
                 <div>
@@ -47,4 +47,4 @@ const Question_One = (props) =>  {
 
 }
 
-export default Question_One;
+export default QuestionOne;

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Question_Zero = (props) =>  {
+const QuestionZero = (props) =>  {
 
 return(
 
@@ -34,4 +34,4 @@ return(
 
 )}
 
-export default Question_Zero
+export default QuestionZero
