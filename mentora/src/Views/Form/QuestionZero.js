@@ -1,4 +1,7 @@
 import React from 'react';
+import build_muscle from "../../images/build_muscle.png";
+import loss_weight from "../../images/loss_weight.png";
+import get_fitter from "../../images/get_fitter.png";
 
 
 const QuestionZero = ({onClick}) =>  {
@@ -13,20 +16,20 @@ return(
     <div className="question_one">
 
         <div onClick={()=>onClick({goal:'LoseWeight'})}>
-            <img src="symbol"/>
+            <img src={loss_weight}/>
             <p>Lose weight</p>
             <p>burning fat and getting tinner</p>
         </div>
 
         <div onClick={()=>onClick({goal:'GetFitter'})}>
-            <img src="symbol"/>
+            <img src={get_fitter}/>
             <p>Get fitter</p>
             <p>bulding clean budy mass</p>
         </div>
 
         <div onClick={()=>onClick({goal:'BuildMuscle'})}>
-            <img src="symbol"/>
-            <p>Build mucle</p>
+            <img src={build_muscle}/>
+            <p>Build mucsle</p>
             <p>building body mass and strength</p>
         </div>
     </div>

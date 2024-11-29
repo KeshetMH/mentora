@@ -109,3 +109,21 @@ align-items: center;
   justify-content: space-between;
 }
 
+.body_fat_photos{
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.gender_icon{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.foodpreference{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}

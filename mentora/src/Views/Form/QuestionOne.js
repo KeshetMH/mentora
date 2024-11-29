@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import male from "../../images/male.png";
+import female from "../../images/female.png";
 
 
 const QuestionOne = ({onClick}) =>  {
@@ -6,14 +8,15 @@ const QuestionOne = ({onClick}) =>  {
     return <div>
                 <div>
                     <p>Some questions about you...</p>
-                    <div>
+
+                    <div className="gender_icon">
                         <div onClick={()=>onClick({gender:'Male'})}>
-                            <symbol></symbol>
+                            <img src={male}/>
                             <p>Male</p>
                         </div>
 
                         <div onClick={()=>onClick({gender:'Male'})}>
-                            <img />
+                            <img src={female}/>
                             <p>Female</p>
                         </div>
                     </div>

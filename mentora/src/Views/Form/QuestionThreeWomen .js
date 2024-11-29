@@ -14,6 +14,8 @@ const QuestionThreeWomen = ({onClick}) =>  {
             
             <p>What image represents your target figure?</p>
 
+            <div className="body_fat_photos">
+
             <div onClick={()=>onClick({bodyfat:'7-12%'})}>
                 <img src={fat7_12}/>
                 <p>Body fat</p>
@@ -60,6 +62,8 @@ const QuestionThreeWomen = ({onClick}) =>  {
                 <img src={fat47_52}/>
                 <p>Body fat</p>
                 <p>47-52%</p>
+            </div>
+
             </div>
 
             <button>NEXT</button>
