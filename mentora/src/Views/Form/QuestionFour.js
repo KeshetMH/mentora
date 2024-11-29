@@ -1,60 +1,62 @@
 import React from 'react'
 
 
-const QuestionFour = (props) =>  {
+const QuestionFour = ({onClick}) =>  {
 
     return <div>
+        <div>
             <p>Do you have food restriction?</p>
             <input></input>
+        </div>
 
             <p>What's your type of food?</p>
 
-            <div>
+            <div onClick={()=>onClick({foodpreference:"Italian"})}>
                 <img src="symbol"/>
-                <button placeholder="Italian"/>
+                <button>Italian</button> 
             </div>
 
-            <div>
+            <div onClick={()=>onClick({foodpreference:"Japanese"})}>
                 <img src="symbol"/>
-                <button placeholder="Japanese"/>
+                <button>Japanese</button>
             </div>
 
-            <div>
+            <div onClick={()=>onClick({foodpreference:"Mexican"})}>
                 <img src="symbol"/>
                 <button placeholder="Mexican"/>
             </div>
 
-            <div>
+            <div onClick={()=>onClick({foodpreference:"Mediterranean"})}>
                 <img src="symbol"/>
                 <button placeholder="Mediterranean"/>
             </div>
 
-            <div>
+            <div onClick={()=>onClick({foodpreference:"Indian"})}>
                 <img src="symbol"/>
                 <button placeholder="Indian"/>
             </div>
 
-            <div>
+            <div onClick={()=>onClick({foodpreference:"Thai"})}>
                 <img src="symbol"/>
                 <button placeholder="Thai"/>
             </div>
 
-            <div>
+            <div onClick={()=>onClick({foodpreference:"Greek"})}>
                 <img src="symbol"/>
                 <button placeholder="Greek"/>
             </div>
 
-            <div>
+            <div onClick={()=>onClick({foodpreference:"Chinese"})}>
                 <img src="symbol"/>
                 <button placeholder="Chinese"/>
             </div>
 
-            <div>
+            <div onClick={()=>onClick({foodpreference:"American"})}>
                 <img src="symbol"/>
                 <button placeholder="American"/>
             </div>
 
-            <div>
+            <div onClick={()=>onClick({foodpreference:"Eastern European"})}>
                 <img src="symbol"/>
                 <button placeholder="Eastern European"/>
             </div>

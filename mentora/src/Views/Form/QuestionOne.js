@@ -1,18 +1,18 @@
 import React from 'react'
 
 
-const QuestionOne = (props) =>  {
+const QuestionOne = ({onClick}) =>  {
 
     return <div>
                 <div>
                     <p>Some questions about you...</p>
                     <div>
-                        <div>
+                        <div onClick={()=>onClick({gender:'Male'})}>
                             <symbol></symbol>
                             <p>Male</p>
                         </div>
 
-                        <div>
+                        <div onClick={()=>onClick({gender:'Male'})}>
                             <img />
                             <p>Female</p>
                         </div>
@@ -33,7 +33,7 @@ const QuestionOne = (props) =>  {
                     </div>
 
                     <div>
-                        <p>hieght</p>
+                        <p>wieght</p>
                          <input plcehilder="this where user put their hieght"/>
                          <button>change unit to KG</button>
                          <button>change unit to LBS</button>

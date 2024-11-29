@@ -16,8 +16,10 @@ import { useState } from 'react';
 function App() {
 
 const [userInput,setUserInput]=useState({})
+console.log(userInput)
 //here will be all the info from user sent to AI
 //and we send reqest to AI
+const [respondFromAI, setRespondFromAI]=useState({})
 
 
   return (
