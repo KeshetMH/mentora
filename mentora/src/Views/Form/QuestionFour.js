@@ -10,13 +10,15 @@ import mediterranean from "../../images/mediterranean.png";
 import mexican from "../../images/mexican.png";
 import thai from "../../images/thai.png";
 
+import { NavLink } from "react-router-dom";
 
-const QuestionFour = ({onClick}) =>  {
+
+const QuestionFour = ({onClick, handleOfChange}) =>  {
 
     return <div>
         <div>
             <p>Do you have food restriction?</p>
-            <input type='text' name='foodrestriction' placeholder='lactose, gluten, nuts...'></input>
+            <input onChange={(e)=>handleOfChange(e)} type='text' name='foodrestriction' placeholder='lactose, gluten, nuts...'/>
 
         </div>
 
@@ -75,7 +77,10 @@ const QuestionFour = ({onClick}) =>  {
             </div>
         </div>
 
-                <button>NEXT</button>
+        <NavLink
+        to={"/"}>
+        <button onClick={()=>onClick('questionFour')}>NEXT</button>
+      </NavLink>
                
            </div>
 

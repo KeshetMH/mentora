@@ -17,39 +17,58 @@ import axios from 'axios';
 function App() {
 
 const [userInput,setUserInput]=useState({})
-console.log(userInput)
 
 //here will be all the info from user sent to AI
 //and we send reqest to AI
 const [respondFromAI, setRespondFromAI]=useState(null)
+
+console.log(respondFromAI)
 
 const sendGroqRequest = async () => {
  
   const endpoint = 'https://api.groq.com/openai/v1/chat/completions';
   const apiKey = process.env.REACT_APP_GROQ_API; // Access API key from .env
 
-  const payload = {
+  const payload = 
+  {
     model: 'llama3-8b-8192',
     messages: [
-      { role: 'system', content: `Respond only in JSON format:
-          Act as a personal trainer. Here are my details:
-          - Gender: Male
-          - Age: 30 years
-          - Current weight: 75 kg
-          - Height: 172 cm
-          - Goal: Lose weight
-          
-          Create a training program and food plan to achieve my lose weight goal. Provide the following in a JSON object format:
+      {
+        role: 'system',
+        content: `
+          You are a personal trainer AI. Respond **only in JSON format**, strictly adhering to the provided JSON schema. Do not include any additional text or explanations outside the JSON object. 
+  
+          ### User Details:
+          - Gender: ${userInput.gender}
+          - Age: ${userInput.age} years
+          - Current Weight: ${userInput.wieght} kg
+          - Height: ${userInput.hieght} cm
+          -current body fat: ${userInput.bodyfat}
+          - Target Body Fat: ${userInput.targetbodyfat}
+          - Goal: ${userInput.goal}
+          - Food Preference: ${userInput.foodpreference}
+          - Food Restriction: ${userInput.foodrestriction}
+  
+          ### Response Requirements:
+          Create a comprehensive **weight loss program** that includes:
           1. **Training Regime**:
-             - Weekly exercise schedule for the gym, detailing exercises for each day (Monday to Sunday).
+             - A weekly gym exercise schedule (Monday to Sunday), specifying exercises, not number of sets and reps.
           2. **Diet Plan**:
-             - Daily meals for the week with total calories and nutritional breakdown for each day.
+             - A daily meal plan for the week (Monday to Sunday), including:
+               - Meal details
+               - Total calories
+               - Nutritional breakdown (protein, carbs, fat).
           3. **Shopping List**:
-             - List of required ingredients for the week with quantities and estimated prices, assuming I live in Spain.
+             - A list of required ingredients for the week, including:
+               - Product names
+               - Quantities
+               - Estimated prices (in EUR, assuming I live in Spain).
           4. **Explanations**:
-             - Reason for the adjusted calorie amount.
-             - Brief explanation of the changes made to my diet and training plan.
-          **JSON Template**:
+             - Reason for the calorie deficit or diet adjustments.
+             - Explanation of the training program's structure.
+  
+          ### JSON Schema:
+          Respond with the following template:
           {
             "training": [
               { "monday": "All exercises for Monday" },
@@ -64,7 +83,7 @@ const sendGroqRequest = async () => {
               {
                 "monday": {
                   "meals": "All meals for Monday",
-                  "total_calories": 0,
+                  "total_calories": "0",
                   "protein": "0g",
                   "carbs": "0g",
                   "fat": "0g"
@@ -73,7 +92,52 @@ const sendGroqRequest = async () => {
               {
                 "tuesday": {
                   "meals": "All meals for Tuesday",
-                  "total_calories": 0,
+                  "total_calories": "0",
+                  "protein": "0g",
+                  "carbs": "0g",
+                  "fat": "0g"
+                }
+              },
+               {
+                "wednesday": {
+                  "meals": "All meals for Wednesday",
+                  "total_calories": "0",
+                  "protein": "0g",
+                  "carbs": "0g",
+                  "fat": "0g"
+                }
+              },
+               {
+                "thursday": {
+                  "meals": "All meals for Thursday",
+                  "total_calories": "0",
+                  "protein": "0g",
+                  "carbs": "0g",
+                  "fat": "0g"
+                }
+              },
+               {
+                "friday": {
+                  "meals": "All meals for Friday",
+                  "total_calories": "0",
+                  "protein": "0g",
+                  "carbs": "0g",
+                  "fat": "0g"
+                }
+              },
+               {
+                "saturday": {
+                  "meals": "All meals for Saturday",
+                  "total_calories": "0",
+                  "protein": "0g",
+                  "carbs": "0g",
+                  "fat": "0g"
+                }
+              },
+               {
+                "sunday": {
+                  "meals": "All meals for Sunday",
+                  "total_calories": "0",
                   "protein": "0g",
                   "carbs": "0g",
                   "fat": "0g"
@@ -81,18 +145,27 @@ const sendGroqRequest = async () => {
               }
             ],
             "shopping_list": [
-              { "product": "Bananas", "quantity": 3, "estimated_price_eur": 1.50 },
-              { "product": "Chicken Breast", "quantity": "1.5 kg", "estimated_price_eur": 9.00 }
+              { "product": "Bananas", "quantity": "3", "estimated_price_eur": "1.50" },
+              { "product": "Chicken Breast", "quantity": "1.5 kg", "estimated_price_eur": "9.00" }
             ],
             "reason_for_creating_this_specific_program": "Explanation for the chosen calorie amount and fitness plan.",
             "program_explanation": "Brief explanation of the diet and training plan."
-          }` },
-      { role: 'user', content: 'Create a new training program and diet plan based on my preferences. Respond in JSON format.'  },
+          }
+  
+          ### Important Notes:
+          - Ensure all string values are enclosed in double quotes.
+          - All quantities and prices must be realistic and match the user's location (Spain).
+          - Ensure the total calorie count is suitable for ${userInput.goal} based on the user's details.
+          - Format all nutritional values as strings with units (e.g., "0g").
+        `
+      },
+      { role: 'user', content: 'Create a new training program and diet plan based on my preferences. Respond in JSON format.You must respond with valid JSON that adheres to the given schema. Avoid trailing commas, missing commas, or any other syntax errors. Verify that the JSON is valid before sending.' }
     ],
-    max_tokens: 6000,
-    temperature: 0.3,
+    
+    max_tokens: 7000,
+    temperature: 0.3
   };
-
+  
   try {
     const res = await axios.post(endpoint, payload, {
       headers: {
@@ -100,17 +173,24 @@ const sendGroqRequest = async () => {
         'Content-Type': 'application/json',
       },
     });
-
-    setRespondFromAI(JSON.parse(res.data.choices[0].message.content));
-  } catch (err) {
+    localStorage.setItem('userProgram', res.data.choices[0].message.content);
+    setRespondFromAI(JSON.parse(res.data.choices[0].message.content));}
+    
+  catch (err) {
     console.error('Error during Groq request:', err);
   } 
 };
 
 useEffect(() => {
-sendGroqRequest();
+  const userProgram = localStorage.getItem('userProgram');
+  if (userProgram) {
+    try {
+      setRespondFromAI(JSON.parse(userProgram));
+    } catch (err) {
+      console.error('Error parsing stored user program:', err);
+    }
+  }
 }, []);
-
 
   return (
     <div className="App">
@@ -121,10 +201,10 @@ sendGroqRequest();
         <Routes>
 {/* For every URL we can render a separate component */}
           <Route path="/" element={<Home />} />
-          <Route path="/Exercises" element={<Exercises />} />
-          <Route path="/Meals" element={<Meals />} />
+          <Route path="/Exercises" element={<Exercises respondFromAI={respondFromAI} />} />
+          <Route path="/Meals" element={<Meals sendGroqRequest={sendGroqRequest} respondFromAI={respondFromAI}/>} />
           <Route path="/Articles" element={<Articles />} />
-          <Route path="/Form" element={<Goal userInput={userInput} setUserInput={setUserInput}/>} />
+          <Route path="/Form" element={<Goal sendGroqRequest={sendGroqRequest} userInput={userInput} setUserInput={setUserInput}/>} />
           <Route path="/About" element={<About />} />
         </Routes>
         <Footer />

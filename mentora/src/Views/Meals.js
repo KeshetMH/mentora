@@ -1,10 +1,20 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Meals = () => {
+const Meals = ({respondFromAI}) => {
 
     return <div className="Meals section">
-            <h1></h1>
+            <h1>My nutrition program</h1>
+
+            {respondFromAI.diet.map((weekday) => {
+            return <div>
+                <h2>{Object.entries(weekday)[0][0]}</h2>
+                <h3>{Object.entries(weekday)[0][1]}</h3>
+            </div>
+        }
+        )}
+
+            <h1>Meals library</h1>
             <p>This library features recipes for healthy, quick-to-make, and nutritious 
                 meals that are both delicious and satisfying. Each recipe is designed to be 
                 ready in 30 minutes or less, using wholesome ingredients that support a 

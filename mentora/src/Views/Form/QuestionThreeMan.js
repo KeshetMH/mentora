@@ -68,8 +68,6 @@ const QuestionThreeMan = ({onClick}) =>  {
             </div>
 
 
-            <button>NEXT</button>
-
            </div>
 
 }

@@ -138,3 +138,8 @@ align-items: center;
 .inactiveProgress{
   color: aqua;
 }
+
+.week_day_box{
+  display: grid;
+  grid-template-columns: 1fr;
+}

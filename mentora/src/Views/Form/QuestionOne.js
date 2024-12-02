@@ -1,3 +1,4 @@
+
 import React from 'react';
 import male from "../../images/male.png";
 import female from "../../images/female.png";
@@ -16,7 +17,7 @@ const QuestionOne = ({onClick, handleOfChange}) =>  {
                             <p>Male</p>
                         </div>
 
-                        <div onClick={()=>onClick({gender:'female'})}>
+                        <div name ="gender" onClick={()=>onClick({gender:'female'})}>
                             <img src={female}/>
                             <p>Female</p>
                         </div>
@@ -41,7 +42,7 @@ const QuestionOne = ({onClick, handleOfChange}) =>  {
                          <button>change unit to LBS</button>
                     </div>
 
-                    <button>NEXT</button>
+                    <button onClick={()=>onClick('questionOne')}>NEXT</button>
 
                 </div>
 

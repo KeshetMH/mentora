@@ -66,7 +66,6 @@ const QuestionThreeWomen = ({onClick}) =>  {
 
             </div>
 
-            <button>NEXT</button>
 
            </div>
 
