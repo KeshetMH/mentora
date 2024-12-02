@@ -13,53 +13,53 @@ const QuestionThreeMan = ({onClick}) =>  {
 
     return <div>
             
-            <p>What image represents your current figure?</p>
+            <p>What image represents your target figure?</p>
 
             <div className="body_fat_photos">
 
-            <div onClick={()=>onClick({bodyfat:'4-9%'})}>
+            <div onClick={()=>onClick({targetbodyfat:'4-9%'})}>
                 <img src={fat4_9}/>
                 <p>Body fat</p>
                 <p>4-9%</p>
             </div>
 
-            <div onClick={()=>onClick({bodyfat:'9-14%'})}>
+            <div onClick={()=>onClick({targetbodyfat:'9-14%'})}>
                 <img src={fat9_14}/>
                 <p>Body fat</p>
                 <p>9-14%</p>
             </div>
 
-            <div onClick={()=>onClick({bodyfat:'14-19%'})}>
+            <div onClick={()=>onClick({targetbodyfat:'14-19%'})}>
                 <img src={fat14_19}/>  
                 <p>Body fat</p>
                 <p>14-19%</p>
             </div>
 
-            <div onClick={()=>onClick({bodyfat:'19-24%'})}>
+            <div onClick={()=>onClick({targetbodyfat:'19-24%'})}>
                 <img src={fat19_24}/>
                 <p>Body fat</p>
                 <p>19-24%</p>
             </div>
 
-            <div onClick={()=>onClick({bodyfat:'24-29%'})}>
+            <div onClick={()=>onClick({targetbodyfat:'24-29%'})}>
                 <img src={fat24_29}/>  
                 <p>Body fat</p>
                 <p>24-29%</p>
             </div>
 
-            <div onClick={()=>onClick({bodyfat:'29-34%'})}>
+            <div onClick={()=>onClick({targetbodyfat:'29-34%'})}>
                 <img src={fat29_34}/>
                 <p>Body fat</p>
                 <p>29-34%</p>
             </div>
 
-            <div onClick={()=>onClick({bodyfat:'34-39%'})}>
+            <div onClick={()=>onClick({targetbodyfat:'34-39%'})}>
                 <img src={fat34_39}/>
                 <p>Body fat</p>
                 <p>34-39%</p>
             </div>
 
-            <div onClick={()=>onClick({bodyfat:'39-44%'})}>
+            <div onClick={()=>onClick({targetbodyfat:'39-44%'})}>
                 <img src={fat39_44}/>
                 <p>Body fat</p>
                 <p>39-44%</p>

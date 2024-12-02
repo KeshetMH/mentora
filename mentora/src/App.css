@@ -18,7 +18,7 @@ button:hover {
 
 .splashImage{
   width: 100%;
-  height: 80vp;
+  height: 80vh;
   object-fit: cover;
 }
 
@@ -63,6 +63,7 @@ justify-content: space-between;
 margin-right:1rem ;
 background-color: rgba(255, 255, 255, 0.099);
 align-items: center;
+
 }
 
 .fotter_notes{
@@ -102,6 +103,8 @@ align-items: center;
 .userInputProgress{
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .question_one{
@@ -126,4 +129,12 @@ align-items: center;
 .foodpreference{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.activeProgress{
+  color: blue;
+}
+
+.inactiveProgress{
+  color: aqua;
 }

@@ -16,7 +16,7 @@ const QuestionFour = ({onClick}) =>  {
     return <div>
         <div>
             <p>Do you have food restriction?</p>
-            <input></input>
+            <input type='text' name='foodrestriction' placeholder='lactose, gluten, nuts...'></input>
 
         </div>
 

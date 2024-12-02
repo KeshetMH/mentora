@@ -3,19 +3,20 @@ import male from "../../images/male.png";
 import female from "../../images/female.png";
 
 
-const QuestionOne = ({onClick}) =>  {
+
+const QuestionOne = ({onClick, handleOfChange}) =>  {
 
     return <div>
                 <div>
                     <p>Some questions about you...</p>
 
                     <div className="gender_icon">
-                        <div onClick={()=>onClick({gender:'Male'})}>
+                        <div onClick={()=>onClick({gender:'male'})}>
                             <img src={male}/>
                             <p>Male</p>
                         </div>
 
-                        <div onClick={()=>onClick({gender:'Male'})}>
+                        <div onClick={()=>onClick({gender:'female'})}>
                             <img src={female}/>
                             <p>Female</p>
                         </div>
@@ -23,21 +24,19 @@ const QuestionOne = ({onClick}) =>  {
 
                     <div>
                         <p>Age</p>
-                         <input plcehilder="this where user put their hieght"/>
-                         <button>increse age</button>
-                         <button>decrese age</button>
+                         <input name='age' type='number' onChange={(e)=>handleOfChange(e)} plceholder="type your age"/>
                     </div>
 
                     <div>
                         <p>hieght</p>
-                         <input plcehilder="this where user put their hieght"/>
+                         <input name='hieght' type='number' onChange={(e)=>handleOfChange(e)} plceholder="type your hieght"/>
                          <button>change unit to CM</button>
                          <button>change unit to FT</button>
                     </div>
 
                     <div>
                         <p>wieght</p>
-                         <input plcehilder="this where user put their hieght"/>
+                         <input name='wieght' type='number' onChange={(e)=>handleOfChange(e)} plceholder="type your wieght"/>
                          <button>change unit to KG</button>
                          <button>change unit to LBS</button>
                     </div>
