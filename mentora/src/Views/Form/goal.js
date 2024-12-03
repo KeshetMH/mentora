@@ -17,6 +17,7 @@ const Start = ({ sendGroqRequest,userInput, setUserInput }) => {
   const [progress, setProgress] = useState(0);
 
   const handleOfChange = (e) => {
+    
     setUserInput((prevInput) => ({
       ...prevInput,
       [e.target.name]: e.target.value,
@@ -107,7 +108,7 @@ const Start = ({ sendGroqRequest,userInput, setUserInput }) => {
 
       {progress == 0 && <QuestionZero onClick={onClick} />}
       {progress == 1 && (
-        <QuestionOne handleOfChange={handleOfChange} onClick={onClick} />
+        <QuestionOne userInput={userInput} handleOfChange={handleOfChange} onClick={onClick} />
       )}
       {progress == 2 && userInput.gender == "female" && (
         <QuestionTwoWomen onClick={onClick} />

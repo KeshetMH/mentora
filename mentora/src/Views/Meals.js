@@ -6,10 +6,14 @@ const Meals = ({respondFromAI}) => {
     return <div className="Meals section">
             <h1>My nutrition program</h1>
 
-            {respondFromAI.diet.map((weekday) => {
-            return <div>
+            {respondFromAI.diet.map((weekday,idx) => {
+            return <div key={idx}>
+                {console.log(Object.entries(weekday))}
                 <h2>{Object.entries(weekday)[0][0]}</h2>
-                <h3>{Object.entries(weekday)[0][1]}</h3>
+                <h2>{Object.entries(weekday)[0][1].meals}</h2>
+                <h2>Total Calories:{Object.entries(weekday)[0][1].total_calories}</h2>
+                <h2>Protein:{Object.entries(weekday)[0][1].protein}</h2>
+                
             </div>
         }
         )}

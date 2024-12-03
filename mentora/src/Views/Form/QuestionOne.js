@@ -5,19 +5,19 @@ import female from "../../images/female.png";
 
 
 
-const QuestionOne = ({onClick, handleOfChange}) =>  {
+const QuestionOne = ({userInput, onClick, handleOfChange}) =>  {
 
     return <div>
                 <div>
                     <p id="question_p">Some questions about you...</p>
 
                     <div className="gender_icon">
-                        <div className="container" onClick={()=>onClick({gender:'male'})}>
+                        <div className={userInput.gender == "male"?"container active_selection":"container"} onClick={()=>onClick({gender:'male'})}>
                             <img src={male}/>
                             <p>Male</p>
                         </div>
 
-                        <div className="container" name ="gender" onClick={()=>onClick({gender:'female'})}>
+                        <div className={userInput.gender == "female"?"container active_selection":"container"} name ="gender" onClick={()=>onClick({gender:'female'})}>
                             <img src={female}/>
                             <p>Female</p>
                         </div>

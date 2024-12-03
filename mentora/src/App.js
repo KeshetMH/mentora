@@ -17,10 +17,12 @@ import axios from 'axios';
 function App() {
 
 const [userInput,setUserInput]=useState({})
+console.log(userInput)
 
 //here will be all the info from user sent to AI
 //and we send reqest to AI
 const [respondFromAI, setRespondFromAI]=useState(null)
+console.log(respondFromAI)
 
 console.log(respondFromAI)
 
@@ -202,7 +204,7 @@ useEffect(() => {
 {/* For every URL we can render a separate component */}
           <Route path="/" element={<Home />} />
           <Route path="/Exercises" element={<Exercises respondFromAI={respondFromAI} />} />
-          <Route path="/Meals" element={<Meals sendGroqRequest={sendGroqRequest} respondFromAI={respondFromAI}/>} />
+          <Route path="/Meals" element={<Meals respondFromAI={respondFromAI}/>} />
           <Route path="/Articles" element={<Articles />} />
           <Route path="/Form" element={<Goal sendGroqRequest={sendGroqRequest} userInput={userInput} setUserInput={setUserInput}/>} />
           <Route path="/About" element={<About />} />
