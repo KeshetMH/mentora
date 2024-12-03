@@ -17,12 +17,12 @@ const QuestionFour = ({onClick, handleOfChange}) =>  {
 
     return <div>
         <div>
-            <p>Do you have food restriction?</p>
+            <p id="question_p">Do you have food restriction?</p>
             <input onChange={(e)=>handleOfChange(e)} type='text' name='foodrestriction' placeholder='lactose, gluten, nuts...'/>
 
         </div>
 
-            <p>What's your type of food?</p>
+            <p id="question_p">What's your type of food?</p>
 
         <div className="foodpreference">
 

@@ -9,37 +9,30 @@ const QuestionOne = ({onClick, handleOfChange}) =>  {
 
     return <div>
                 <div>
-                    <p>Some questions about you...</p>
+                    <p id="question_p">Some questions about you...</p>
 
                     <div className="gender_icon">
-                        <div onClick={()=>onClick({gender:'male'})}>
+                        <div className="container" onClick={()=>onClick({gender:'male'})}>
                             <img src={male}/>
                             <p>Male</p>
                         </div>
 
-                        <div name ="gender" onClick={()=>onClick({gender:'female'})}>
+                        <div className="container" name ="gender" onClick={()=>onClick({gender:'female'})}>
                             <img src={female}/>
                             <p>Female</p>
                         </div>
                     </div>
 
                     <div>
-                        <p>Age</p>
-                         <input name='age' type='number' onChange={(e)=>handleOfChange(e)} plceholder="type your age"/>
+                         <input className="input" name='age' min="16" max="90" type='number' onChange={(e)=>handleOfChange(e)} placeholder="Age"/>
                     </div>
 
                     <div>
-                        <p>hieght</p>
-                         <input name='hieght' type='number' onChange={(e)=>handleOfChange(e)} plceholder="type your hieght"/>
-                         <button>change unit to CM</button>
-                         <button>change unit to FT</button>
+                         <input className="input" name='hieght' min="300" max="140" type='number' onChange={(e)=>handleOfChange(e)} placeholder="Hieght"/>
                     </div>
 
                     <div>
-                        <p>wieght</p>
-                         <input name='wieght' type='number' onChange={(e)=>handleOfChange(e)} plceholder="type your wieght"/>
-                         <button>change unit to KG</button>
-                         <button>change unit to LBS</button>
+                         <input  className="input" name='wieght' min="20" max="300" type='number' onChange={(e)=>handleOfChange(e)} placeholder="wieght"/>
                     </div>
 
                     <button onClick={()=>onClick('questionOne')}>NEXT</button>

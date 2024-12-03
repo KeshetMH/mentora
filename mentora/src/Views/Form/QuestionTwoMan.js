@@ -13,53 +13,53 @@ const QuestionTwoMan = ({onClick}) =>  {
 
     return <div>
             
-            <p>What image represents your current figure?</p>
+            <p id="question_p">What image represents your current figure?</p>
 
             <div className="body_fat_photos">
 
-            <div onClick={()=>onClick({currentbodyfat:'4-9%'})}>
+            <div className="container" onClick={()=>onClick({currentbodyfat:'4-9%'})}>
                 <img src={fat4_9}/>
                 <p>Body fat</p>
                 <p>4-9%</p>
             </div>
 
-            <div onClick={()=>onClick({currentbodyfat:'9-14%'})}>
+            <div className="container" onClick={()=>onClick({currentbodyfat:'9-14%'})}>
                 <img src={fat9_14}/>
                 <p>Body fat</p>
                 <p>9-14%</p>
             </div>
 
-            <div onClick={()=>onClick({currentbodyfat:'14-19%'})}>
+            <div className="container" onClick={()=>onClick({currentbodyfat:'14-19%'})}>
                 <img src={fat14_19}/>  
                 <p>Body fat</p>
                 <p>14-19%</p>
             </div>
 
-            <div onClick={()=>onClick({currentbodyfat:'19-24%'})}>
+            <div className="container" onClick={()=>onClick({currentbodyfat:'19-24%'})}>
                 <img src={fat19_24}/>
                 <p>Body fat</p>
                 <p>19-24%</p>
             </div>
 
-            <div onClick={()=>onClick({currentbodyfat:'24-29%'})}>
+            <div className="container" onClick={()=>onClick({currentbodyfat:'24-29%'})}>
                 <img src={fat24_29}/>  
                 <p>Body fat</p>
                 <p>24-29%</p>
             </div>
 
-            <div onClick={()=>onClick({currentbodyfat:'29-34%'})}>
+            <div className="container" onClick={()=>onClick({currentbodyfat:'29-34%'})}>
                 <img src={fat29_34}/>
                 <p>Body fat</p>
                 <p>29-34%</p>
             </div>
 
-            <div onClick={()=>onClick({currentbodyfat:'34-39%'})}>
+            <div className="container" onClick={()=>onClick({currentbodyfat:'34-39%'})}>
                 <img src={fat34_39}/>
                 <p>Body fat</p>
                 <p>34-39%</p>
             </div>
 
-            <div onClick={()=>onClick({currentbodyfat:'39-44%'})}>
+            <div className="container" onClick={()=>onClick({currentbodyfat:'39-44%'})}>
                 <img src={fat39_44}/>
                 <p>Body fat</p>
                 <p>39-44%</p>
