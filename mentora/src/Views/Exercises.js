@@ -1,11 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import axios from 'axios';
 
 const Exercises = ({respondFromAI}) => {
 
     return <div className="Exercises section">
         <h1>My exercise program</h1>
         <p>Complete 3 sets of 10-12 reps per exercise</p>
+
 
 <div className="exercise_grid">
     
@@ -24,7 +26,7 @@ const Exercises = ({respondFromAI}) => {
                 </p>
 
                 <div>
-                    <input className="input" placeholder="here the user search fo the exercise"/>
+                    <input className="input" placeholder="choose your exercise"/>
                 </div>
 
                 <div>

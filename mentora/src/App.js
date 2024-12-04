@@ -194,6 +194,26 @@ useEffect(() => {
   }
 }, []);
 
+const options = {
+  method: 'GET',
+  url: 'https://exercisedb.p.rapidapi.com/exercises/name/%7Bname%7D',
+  params: {
+    offset: '0',
+    limit: '10'
+  },
+  headers: {
+    'x-rapidapi-key': 'c1dfea8db0msh6c9a0b6dc30b061p1c9e2djsn036a81b500e8',
+    'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+
   return (
     <div className="App">
       {/* Declaring the router which will hold al the routes/URLs*/}
