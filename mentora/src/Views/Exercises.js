@@ -10,7 +10,7 @@ const Exercises = ({respondFromAI}) => {
 <div className="exercise_grid">
     
         {respondFromAI.training.map((weekday) => {
-            return <div className="week_day_box">
+            return <div className="container week_day_box">
                     <h2>{Object.entries(weekday)[0][0]}</h2>
                     <h3>{Object.entries(weekday)[0][1]}</h3>
                 </div>
@@ -24,7 +24,7 @@ const Exercises = ({respondFromAI}) => {
                 </p>
 
                 <div>
-                    <input placeholder="here the user search fo the exercise"/>
+                    <input className="input" placeholder="here the user search fo the exercise"/>
                 </div>
 
                 <div>

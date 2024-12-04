@@ -56,10 +56,7 @@ const Start = ({ sendGroqRequest,userInput, setUserInput }) => {
         }
         else{alert('please select a food preference')}
     }
-
   };
-
-
 
   return (
     <div className="section">

@@ -9,16 +9,14 @@ import japanese from "../../images/japanese.png";
 import mediterranean from "../../images/mediterranean.png";
 import mexican from "../../images/mexican.png";
 import thai from "../../images/thai.png";
-
 import { NavLink } from "react-router-dom";
-
 
 const QuestionFour = ({onClick, handleOfChange}) =>  {
 
     return <div>
         <div>
             <p id="question_p">Do you have food restriction?</p>
-            <input onChange={(e)=>handleOfChange(e)} type='text' name='foodrestriction' placeholder='lactose, gluten, nuts...'/>
+            <input className="input" onChange={(e)=>handleOfChange(e)} type='text' name='foodrestriction' placeholder='lactose, gluten, nuts...'/>
 
         </div>
 
@@ -26,54 +24,54 @@ const QuestionFour = ({onClick, handleOfChange}) =>  {
 
         <div className="foodpreference">
 
-            <div onClick={()=>onClick({foodpreference:"Italian"})}>
+            <div className="container" onClick={()=>onClick({foodpreference:"Italian"})}>
                 <img src={italian}/>
-                <button>Italian</button> 
+                <p>Italian</p> 
             </div>
 
-            <div onClick={()=>onClick({foodpreference:"Japanese"})}>
+            <div className="container" onClick={()=>onClick({foodpreference:"Japanese"})}>
                 <img src={japanese}/>
-                <button>Japanese</button>
+                <p>Japanese</p>
             </div>
 
-            <div onClick={()=>onClick({foodpreference:"Mexican"})}>
+            <div className="container" onClick={()=>onClick({foodpreference:"Mexican"})}>
                 <img src={mexican}/>
-                <button>Mexican</button>
+                <p>Mexican</p>
             </div>
 
-            <div onClick={()=>onClick({foodpreference:"Mediterranean"})}>
+            <div className="container" onClick={()=>onClick({foodpreference:"Mediterranean"})}>
                 <img src={mediterranean}/>
-                <button>Mediterranean</button>
+                <p>Mediterranean</p>
             </div>
 
-            <div onClick={()=>onClick({foodpreference:"Indian"})}>
+            <div className="container" onClick={()=>onClick({foodpreference:"Indian"})}>
                 <img src={indian}/>
-                <button>Indian</button>
+                <p>Indian</p>
             </div>
 
-            <div onClick={()=>onClick({foodpreference:"Thai"})}>
+            <div className="container" onClick={()=>onClick({foodpreference:"Thai"})}>
                 <img src={thai}/>
-                <button>Thai</button>
+                <p>Thai</p>
             </div>
 
-            <div onClick={()=>onClick({foodpreference:"Greek"})}>
+            <div className="container" onClick={()=>onClick({foodpreference:"Greek"})}>
                 <img src={greek}/>
-                <button>Greek</button>
+                <p>Greek</p>
             </div>
 
-            <div onClick={()=>onClick({foodpreference:"Chinese"})}>
+            <div className="container" onClick={()=>onClick({foodpreference:"Chinese"})}>
                 <img src={chinese}/>
-                <button>Chinese</button>
+                <p>Chinese</p>
             </div>
 
-            <div onClick={()=>onClick({foodpreference:"American"})}>
+            <div className="container" onClick={()=>onClick({foodpreference:"American"})}>
                 <img src={american}/>
-                <button>American</button>
+                <p>American</p>
             </div>
 
-            <div onClick={()=>onClick({foodpreference:"Eastern European"})}>
+            <div className="container" onClick={()=>onClick({foodpreference:"Eastern European"})}>
                 <img src={eastern_european}/>
-                <button>Eastern European</button>
+                <p>Eastern European</p>
             </div>
         </div>
 
@@ -83,7 +81,6 @@ const QuestionFour = ({onClick, handleOfChange}) =>  {
       </NavLink>
                
            </div>
-
 }
 
 export default QuestionFour;
