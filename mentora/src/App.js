@@ -196,7 +196,7 @@ useEffect(() => {
 
 const options = {
   method: 'GET',
-  url: 'https://exercisedb.p.rapidapi.com/exercises/name/%7Bname%7D',
+  url: 'https://exercisedb.p.rapidapi.com/exercises/name/squat',
   params: {
     offset: '0',
     limit: '10'
@@ -207,12 +207,22 @@ const options = {
   }
 };
 
+const sendAPIRequest = async () => {
 try {
 	const response = await axios.request(options);
 	console.log(response.data);
 } catch (error) {
 	console.error(error);
 }
+};
+
+useEffect(() => {
+  sendAPIRequest();
+},[]);
+
+sendAPIRequest(); //I get a respond from the API and i gives me an array 
+
+// inside arrays so i need to mao them to show me the exercise
 
   return (
     <div className="App">

@@ -1,8 +1,39 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import axios from 'axios';
+import { useState } from 'react';
 
 const Exercises = ({respondFromAI}) => {
+
+const [userInput, setUserInput] = useState("")
+console.log(userInput)
+
+const getExercise = async() => {  
+const options = {
+  method: 'GET',
+  url: `https://exercisedb.p.rapidapi.com/exercises/name/${userInput}`,
+  params: {
+    offset: '0',
+    limit: '10'
+  },
+  headers: {
+    'x-rapidapi-key': 'c1dfea8db0msh6c9a0b6dc30b061p1c9e2djsn036a81b500e8',
+    'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+}
+
+const handleChange = e => {
+    let data = e.target.value;
+    setUserInput(data)
+  };
 
     return <div className="Exercises section">
         <h1>My exercise program</h1>
@@ -10,6 +41,7 @@ const Exercises = ({respondFromAI}) => {
 
 
 <div className="exercise_grid">
+    
     
         {respondFromAI.training.map((weekday) => {
             return <div className="container week_day_box">
@@ -26,7 +58,8 @@ const Exercises = ({respondFromAI}) => {
                 </p>
 
                 <div>
-                    <input className="input" placeholder="choose your exercise"/>
+                    <input className="input" placeholder="choose your exercise" onChange={handleChange}/>
+                    <button onClick={getExercise}>search exercise</button>
                 </div>
 
                 <div>
