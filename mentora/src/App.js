@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Exercises from "./Views/Exercises.js";
 import Meals from "./Views/Meals.js";
-import Articles from "./Views/Articles.js";
 import Goal from "./Views/Form/goal.js";
 import About from "./Views/About.js";
 import Navbar from "./Components/Navbar.js";
@@ -12,24 +10,23 @@ import Footer from './Components/Footer.js';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
-
 function App() {
 
-const [userInput,setUserInput]=useState({})
-console.log(userInput)
+const [userInput,setUserInput]=useState({});
+//this render the user input that created here and then sends to the form
+//where user start the questioner and put all the info about himself.
+//this input also set to the request to AI
 
-//here will be all the info from user sent to AI
-//and we send reqest to AI
-const [respondFromAI, setRespondFromAI]=useState(null)
-console.log(respondFromAI)
-
-console.log(respondFromAI)
+const [respondFromAI, setRespondFromAI]=useState(null);
+//this render the respond from AI. it also sent the state to the Exercises and
+//Meals to present the workout plan and nutrition program
 
 const sendGroqRequest = async () => {
+  //this responsible to send the request to the AI. the function async is andle 
+  //the promise
  
-  const endpoint = 'https://api.groq.com/openai/v1/chat/completions';
-  const apiKey = process.env.REACT_APP_GROQ_API; // Access API key from .env
+  const endpoint = 'https://api.groq.com/openai/v1/chat/completions';//this the url
+  const apiKey = process.env.REACT_APP_GROQ_API; //Access API key from .env
 
   const payload = 
   {
@@ -50,7 +47,7 @@ const sendGroqRequest = async () => {
           - Goal: ${userInput.goal}
           - Food Preference: ${userInput.foodpreference}
           - Food Restriction: ${userInput.foodrestriction}
-  
+
           ### Response Requirements:
           Create a comprehensive **weight loss program** that includes:
           1. **Training Regime**:
@@ -177,11 +174,15 @@ const sendGroqRequest = async () => {
     });
     localStorage.setItem('userProgram', res.data.choices[0].message.content);
     setRespondFromAI(JSON.parse(res.data.choices[0].message.content));}
+    //localStorage:where the program is stored, on the brwoser as a cookie
+    //"setItem"=commend to save in storage
+    //because the respond is long string it needs to parse to JSON format
     
   catch (err) {
     console.error('Error during Groq request:', err);
   } 
 };
+//await pauses until the promise is resolved. if there is an error it will be catched and consoled
 
 useEffect(() => {
   const userProgram = localStorage.getItem('userProgram');
@@ -194,48 +195,18 @@ useEffect(() => {
   }
 }, []);
 
-const options = {
-  method: 'GET',
-  url: 'https://exercisedb.p.rapidapi.com/exercises/name/squat',
-  params: {
-    offset: '0',
-    limit: '10'
-  },
-  headers: {
-    'x-rapidapi-key': 'c1dfea8db0msh6c9a0b6dc30b061p1c9e2djsn036a81b500e8',
-    'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
-  }
-};
-
-const sendAPIRequest = async () => {
-try {
-	const response = await axios.request(options);
-	console.log(response.data);
-} catch (error) {
-	console.error(error);
-}
-};
-
-useEffect(() => {
-  sendAPIRequest();
-},[]);
-
-sendAPIRequest(); //I get a respond from the API and i gives me an array 
-
-// inside arrays so i need to mao them to show me the exercise
 
   return (
     <div className="App">
       {/* Declaring the router which will hold al the routes/URLs*/}
       <Router>
       <Navbar/>
-{/* We need to use the Routes wrapper */}
+      {/* We need to use the Routes wrapper */}
         <Routes>
-{/* For every URL we can render a separate component */}
+      {/* For every URL we can render a separate component and send the state or function by need(element)*/}
           <Route path="/" element={<Home />} />
           <Route path="/Exercises" element={<Exercises respondFromAI={respondFromAI} />} />
           <Route path="/Meals" element={<Meals respondFromAI={respondFromAI}/>} />
-          <Route path="/Articles" element={<Articles />} />
           <Route path="/Form" element={<Goal sendGroqRequest={sendGroqRequest} userInput={userInput} setUserInput={setUserInput}/>} />
           <Route path="/About" element={<About />} />
         </Routes>

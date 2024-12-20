@@ -3,7 +3,6 @@ import build_muscle from "../../images/build_muscle.png";
 import loss_weight from "../../images/loss_weight.png";
 import get_fitter from "../../images/get_fitter.png";
 
-
 const QuestionZero = ({onClick}) =>  {
 
 return(

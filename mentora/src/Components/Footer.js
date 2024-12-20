@@ -1,10 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logoImage from "../images/logoImage.png";
-import Exercises from "../Views/Exercises";
-import Articles from "../Views/Articles";
-import About from "../Views/About";
-import Meals from "../Views/Meals";
 import email_logo from "../images/email_logo.png"
 import linkedin_logo from "../images/linkedin_logo.png"
 
@@ -15,6 +11,7 @@ const Footer = () => {
     <div className="footer_Link">
         <img className="logo" src={logoImage}/>
 
+        {/*this conected and create link between the componenet Footer to every url*/}
         <div className="footer_pages">
         <NavLink
         to={"/exercises"}>
@@ -27,20 +24,14 @@ const Footer = () => {
       </NavLink>
 
       <NavLink
-        to={"/articles"}>
-        Articles
-      </NavLink>
-
-
-      <NavLink
         to={"/about"}>
         About
       </NavLink>
         </div>
 
-        <div className="footer_contact">
+    <div className="footer_contact">
         <a  href="page.html"><img id="logo_footer" src={linkedin_logo}/></a>
-        <a href="page.html"><img id="logo_footer" src={email_logo}/></a>
+        <a href="mailto:keshet17@gmail.com"><img id="logo_footer" src={email_logo}/></a>
         </div>
     </div>
 
